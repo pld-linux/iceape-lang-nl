@@ -4,12 +4,12 @@
 Summary:	Dutch resources for Iceape
 Summary(pl.UTF-8):	Holenderskie pliki językowe dla Iceape
 Name:		iceape-lang-%{_lang}
-Version:	1.1.13
+Version:	1.1.16
 Release:	1
 License:	MPL 1.1 or GPL v2+ or LGPL v2.1+
 Group:		I18n
 Source0:	http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/%{version}/contrib-localized/seamonkey-%{version}.%{_lare}.langpack.xpi
-# Source0-md5:	f405bf0167800fcdb0d53f2772c26616
+# Source0-md5:	2bf58c6ac035c69759cc4d8f8553c370
 Source2:	gen-installed-chrome.sh
 URL:		http://www.seamonkey-project.org/
 BuildRequires:	unzip
@@ -31,6 +31,7 @@ Holenderskie pliki językowe dla Iceape.
 %prep
 %setup -q -c
 install %{SOURCE2} .
+mv -f chrome/NL.{JAR,jar}
 ./gen-installed-chrome.sh locale chrome/{%{_reg},%{_lare},%{_lang}-unix}.jar \
 	> lang-%{_lang}-installed-chrome.txt
 
