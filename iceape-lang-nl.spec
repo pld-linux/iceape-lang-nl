@@ -12,7 +12,10 @@ Source0:	http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/%{versio
 # Source0-md5:	2bf58c6ac035c69759cc4d8f8553c370
 Source2:	gen-installed-chrome.sh
 URL:		http://www.seamonkey-project.org/
+BuildRequires:	perl-base
+BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
+BuildRequires:	zip
 Requires(post,postun):	iceape >= %{version}
 Requires(post,postun):	textutils
 Requires:	iceape >= %{version}
